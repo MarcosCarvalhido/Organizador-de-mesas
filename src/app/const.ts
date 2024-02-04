@@ -11,6 +11,7 @@ interface participante {
 
 export interface Mesa {
     mestre: string;
+    uri:string;
     descricao: {
         aventura: string;
         resumo?: string;

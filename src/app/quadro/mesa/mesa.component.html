@@ -1,8 +1,21 @@
 @if(mesa){
-<div *ngIf=""></div>
-    {{mesa.mestre}}
-    {{mesa.descricao.aventura}}
-    {{mesa.descricao.sistema}}
-} else {
-    saporra é nulo caralho
-}
+<div class="mesa-card">
+    <img src="assets/big_cover_front.png">
+    <div style="margin-left: 2rem;">
+        <div>
+            <span class="font-bold">Mestre:</span>  
+            {{mesa.mestre}}
+        </div>
+        <div>
+            <span class="font-bold">Aventura:</span>
+            {{mesa.descricao.aventura}}
+        </div>
+        <div>
+            <span class="font-bold">Sistema: </span>
+            {{mesa.descricao.sistema}}
+        </div>
+        <button (click)="abrirInformacoes()">Saiba Mais</button>
+    </div>
+</div>
+} 
+    
