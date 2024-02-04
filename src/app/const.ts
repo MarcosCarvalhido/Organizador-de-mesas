@@ -15,7 +15,7 @@ export interface Mesa {
         aventura: string;
         resumo?: string;
         sistema: string;
-        faixaEtaria: faixaEtaria;
+        faixaEtaria?: faixaEtaria;
     }
     qtdDeParticipante?: number;
     qtdDeParticipantesMax?: number;
