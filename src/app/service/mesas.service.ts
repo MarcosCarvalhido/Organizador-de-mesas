@@ -30,7 +30,7 @@ export class MesasService {
   }
 
   public getMesa(mesaUri: string): Mesa | null {
-    const mesa = this.mesas.find(el => el.uri = mesaUri)
+    const mesa = this.mesas.find(el => el.uri === mesaUri)
     if (mesa) {
       return mesa;
     }
