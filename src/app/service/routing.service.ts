@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
-export interface DWbNavigation {
+export interface Navigation {
   url: string;
   route: string[];
   navigate: () => void;
@@ -18,12 +18,12 @@ export class RoutingService {
 
   public getMesaNavigation(args: {
     mesaUri: string;
-  }): DWbNavigation {
+  }): Navigation {
     return this._buildNavigation('info',[
       args.mesaUri
     ]);
   }
-  private _buildNavigation(space: string, parts: string[]): DWbNavigation {
+  private _buildNavigation(space: string, parts: string[]): Navigation {
     const route = [
       '/' + space,
       ...parts
